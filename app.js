@@ -12,29 +12,25 @@ app.get("/", function (req, res) {
         console.log(response.statusCode);
         // on getting response from api server
         response.on("data", function (data) {
-            
-            const weatherData=JSON.parse(data);
-           // console.log(weatherData);
-            const temp =weatherData.main.temp;      //traverse through tree to get specific data
-            const desc =weatherData.weather[0].description;
 
-            console.log(temp);
-            console.log(desc);
+            const weatherData = JSON.parse(data);
+            // console.log(weatherData);
+            const temp = weatherData.main.temp;      //traverse through tree to get specific data
+            const desc = weatherData.weather[0].description;
+            const icon = weatherData.weather[0].icon;
+            const iconUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+            //console.log(temp);
+            //console.log(desc);
+            res.write(" <p>weather description is " + desc + "</p>");
+            res.write("<h1>the tempreatur in London is " + temp + " degree celcius</h1>");
+            res.write("<img src=" + iconUrl + ">");
+            //res.send("<h1>the tempreatur in London is "+temp+" degree celcius</h1>");  //single send line 
+            res.send();
+
         });
     });
-    res.send("sever is up and running");
+
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
