@@ -5,11 +5,12 @@ const https=require("https");           //https inbuilt node module required to 
 
 const app=express();
     app.get("/",function(req,res){
-        //usr to api got from postman
+        //url to api got from postman
         const url="https://api.openweathermap.org/data/2.5/weather?q=london&appid=f5f9e1d171638cdd0a6d7897e7aa3b6e&units=metric";
+        //https.get to get response from api server
         https.get(url,function(response){
-            console
-        })
+            console.log(response);
+        });
         res.send("sever is up and running");
     });
 
