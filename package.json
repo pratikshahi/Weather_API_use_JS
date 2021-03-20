@@ -1,0 +1,22 @@
+{
+  "name": "weather_api_use",
+  "version": "1.0.0",
+  "description": "creating weather detail giving website using weathe api and expressjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratikshahi/Weather_API_use_JS.git"
+  },
+  "author": "Pratik Shahi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pratikshahi/Weather_API_use_JS/issues"
+  },
+  "homepage": "https://github.com/pratikshahi/Weather_API_use_JS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
